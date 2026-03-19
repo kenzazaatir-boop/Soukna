@@ -86,7 +86,7 @@ export function Stats() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden bg-background">
+    <section className="py-24 relative overflow-hidden bg-[#fdfbf7]">
       {/* Decorative ambient gradients */}
       <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] bg-terracotta/5 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-olive/5 rounded-full blur-[100px] pointer-events-none" />
