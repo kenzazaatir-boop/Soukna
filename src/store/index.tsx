@@ -28,4 +28,9 @@ export function StoreProvider({ children }: { children: React.ReactNode }) {
 export { useCart, useWishlist, useFilter, useAuth };
 
 // ===== EXPORT TYPES =====
-export * from '@/types';
+export type {
+  Product, Artisan, Region, CartItem, Cart, Order,
+  User, Address, AuthState, WishlistItem, Wishlist,
+  FilterOptions, FilterState, ApiResponse, PaginatedResponse,
+  Notification, Review, SEOMeta,
+} from '@/types';

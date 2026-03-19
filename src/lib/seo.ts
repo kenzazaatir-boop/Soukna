@@ -20,10 +20,15 @@ export interface SEOMetaData {
   alternateLanguages?: Array<{ lang: string; url: string }>;
 }
 
-export interface SchemaOrg {
+type SchemaOrgValue = string | number | boolean | null | undefined | SchemaOrgObject | SchemaOrgValue[];
+
+interface SchemaOrgObject {
+  [key: string]: SchemaOrgValue;
+}
+
+export interface SchemaOrg extends SchemaOrgObject {
   "@context": string;
   "@type": string;
-  [key: string]: any;
 }
 
 // Base URL for the website

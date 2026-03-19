@@ -7,6 +7,7 @@ type Language = 'fr' | 'ar';
 type LanguageContextType = {
   language: Language;
   toggleLanguage: () => void;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   t: (key: string) => any;
 };
 
@@ -47,6 +48,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 
   const t = useCallback((keyPath: string) => {
     const keys = keyPath.split('.');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     let result: any = translations[language];
     for (const key of keys) {
       if (result && result[key]) {

@@ -64,7 +64,7 @@ export function useSmoothScroll() {
 /**
  * Hook for parallax scroll effect
  */
-export function useParallax(_offset = 50) {
+export function useParallax() {
   const ref = useRef(null);
   const [scrollY, setScrollY] = useState(0);
 
@@ -150,7 +150,7 @@ export function useSlideInAnimation(
     down: { x: 0, y: -50 },
   };
 
-  const offset = directionMap[direction]; // eslint-disable-line @typescript-eslint/no-unused-vars
+  const offset = directionMap[direction];
 
   return {
     initial: { opacity: 0, ...offset },
