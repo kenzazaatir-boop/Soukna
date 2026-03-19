@@ -95,38 +95,34 @@ export function Hero() {
               <div className="relative rounded-[2rem] overflow-hidden shadow-card border-[6px] border-white/60 group">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-80 z-10 transition-opacity duration-300 group-hover:opacity-60" />
                 <img
-                  src="/videos/economie-circulaire-1.jpg"
+                  src="videos/economie-circulaire-1.jpg"
                   alt="Artisanat durable Soukna"
                   className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                
-                {/* Overlay Text inside image */}
-                <div className="absolute bottom-6 left-6 right-6 z-20 text-white">
-                  <p className="font-semibold text-lg flex items-center gap-2">
-                    <span className="w-2 h-2 rounded-full bg-warm-gold animate-pulse" />
-                    {t('footer.ecoCycle')}
-                  </p>
-                </div>
               </div>
 
-              {/* Floating Glass Cards */}
-              <div className="absolute -bottom-10 -left-10 glass rounded-2xl p-5 shadow-card animate-float z-30">
+              {/* Decorative elements */}
+              <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-warm-gold/20 rounded-2xl blur-2xl -z-10" />
+              <div className="absolute -top-6 -left-6 w-24 h-24 bg-olive/20 rounded-full blur-2xl -z-10" />
+
+              {/* Floating Badge */}
+              <div className="absolute -bottom-10 -left-10 bg-white p-6 rounded-2xl shadow-xl z-20 animate-float stagger-2 hidden sm:block">
                 <div className="flex items-center gap-4">
-                  <div className="w-14 h-14 rounded-full bg-terracotta/10 flex items-center justify-center">
-                    <img src="/placeholder-avatar.svg" alt="Artisan" className="w-14 h-14 rounded-full border-2 border-white object-cover hidden" />
-                    <span className="text-3xl drop-shadow-sm">🏺</span>
+                  <div className="w-12 h-12 rounded-xl bg-terracotta/10 flex items-center justify-center">
+                    <Sparkles className="w-6 h-6 text-terracotta" />
                   </div>
                   <div>
-                    <div className="font-bold text-foreground text-lg">{t('home.map.legendHigh').split(' ')[0]}</div>
-                    <div className="text-sm text-muted-foreground font-medium text-balance">{t('footer.madeIn')}</div>
+                    <div className="text-sm font-bold text-foreground">100% {t('home.hero.handmade')}</div>
+                    <div className="text-xs text-muted-foreground">{t('home.hero.authentic')}</div>
                   </div>
                 </div>
               </div>
 
-              <div className="absolute top-10 -right-8 glass rounded-2xl p-4 shadow-card animate-float-delayed z-30 hidden sm:block">
-                <div className="flex items-center gap-3">
-                  <div className="w-12 h-12 rounded-full bg-olive/10 flex items-center justify-center">
-                    <span className="text-2xl drop-shadow-sm">🌿</span>
+              {/* Artisan Badge */}
+              <div className="absolute top-10 -right-12 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-xl z-20 animate-float flex items-center gap-3 border border-white/50 hidden lg:flex">
+                <div className="relative group">
+                  <div className="w-10 h-10 rounded-full bg-olive/20 flex items-center justify-center overflow-hidden">
+                    <img src="placeholder-avatar.svg" alt="Artisan" className="w-14 h-14 rounded-full border-2 border-white object-cover hidden" />
                   </div>
                   <div>
                     <div className="font-bold text-foreground">100% {t('nav.eco')}</div>

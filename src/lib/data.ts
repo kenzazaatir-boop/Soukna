@@ -65,7 +65,7 @@ export async function getArtisans(): Promise<Artisan[]> {
     specialty: item.specialty,
     location: item.location,
     rating: Number(item.rating),
-    image: item.image,
+    image: item.image?.startsWith('/') ? item.image.slice(1) : item.image,
     totalSales: item.total_sales || 0,
     productCount: item.products_count || 0,
   }));
@@ -111,13 +111,13 @@ export async function getProducts(options?: {
     description: item.description,
     price: Number(item.price),
     category: item.category,
-    image: item.image,
+    image: item.image?.startsWith('/') ? item.image.slice(1) : item.image,
     artisan: item.artisans?.name || 'Artisan Inconnu',
-    location: item.artisans?.location || item.location || 'Tunisie',
-    rating: Number(item.rating),
-    reviews: item.reviews,
-    ecoScore: item.eco_score,
-    stock: item.stock,
+    location: item.artisans?.location || 'Tunisie',
+    rating: Number(item.rating) || 0,
+    reviews: item.reviews_count || 0,
+    ecoScore: item.eco_score || 0,
+    stock: item.stock || 0,
     tags: item.tags || [],
   }));
 }

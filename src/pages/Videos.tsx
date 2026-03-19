@@ -29,7 +29,7 @@ const videos: Video[] = [
     id: 'olive-wood-story',
     title: 'خشب الزيتون: روح الأرض 🌿',
     duration: '2:30',
-    thumbnail: '/videos/economie-circulaire-1.jpg',
+    thumbnail: 'videos/economie-circulaire-1.jpg',
     items: [
       'جني الزيتون في الصباح الباكر',
       'صنعة اليدين في الورشة',
@@ -40,18 +40,18 @@ const videos: Video[] = [
     music: 'موسيقى تونسية هادية و أصوات العصافير',
     slogan: "اللي تعطينا الأرض، يرجع تحفة في دارك.",
     scenes: [
-      { time: '0–30 s', visual: 'شروق الشمس الذهبي على حقول الزيتون، فلاح يتمشى بلبسة تقليدية ويلم في أغصان الخشب الخام', voixOff: 'مع خيوط الفجر الأولى في ريف تونس، تبدأ رحلة خشب الزيتون. الفلاح يلم الأغصان اللي بقات من الموسم، كنز طبيعي يستنى شكون يعطيه الروح.', videoSrc: '/videos/economie-circulaire-1.mp4', thumbnail: '/videos/economie-circulaire-1.jpg' },
-      { time: '30–60 s', visual: 'داخل ورشة قديمة، ضوء الشمس يطل من الكوة، الحرفي يقص ويشكل الخشب بكل تركيز، لقطات مقربة لليدين', voixOff: 'داخل الورشة، الصمت ما يقطعه كان صوت الأدوات. الحرفي ببراعة يديه، يشكل في الخشب، يحترم عروقه وتفاصيله، في لقطة تعكس قرون من الصنعة.', videoSrc: '/videos/economie-circulaire-2.mp4', thumbnail: '/videos/economie-circulaire-2.jpg' },
-      { time: '60–90 s', visual: 'عملية الصنفرة (sanding) والدهن بالزيت الطبيعي، الخشب يبدأ يلمع ويظهر جماله النهائي', voixOff: 'بشوية بشوية، الغبرة تبرد والجمال يظهر. الخشب يتحول لملاعق، صحفة، وديكورات تفوح بريحة الأرض. لمسة الزيت الطبيعي ترجعلو بريقه.', videoSrc: '/videos/economie-circulaire-3.mp4', thumbnail: '/videos/economie-circulaire-3.jpg' },
-      { time: '90–120 s', visual: 'عرض المنتجات في ستاند سوقنا في سوق تقليدي مزين، ترتيب فني للمنتجات', voixOff: 'الآن، المنتجات جاهزة. في قلب سوق حرفي تونسي، تحف خشب الزيتون تتصدر المشهد، تجذب العين برقة تصميمها وأصالتها.', videoSrc: '/videos/economie-circulaire-4.mp4', thumbnail: '/videos/economie-circulaire-4.jpg' },
-      { time: '120–150 s', visual: 'زبائن يلمسوا الخشب، يتبسموا ويتناقشوا مع الحرفي، لقطة شراء وفرحة متبادلة', voixOff: 'الزبون يلمس الدفء في الخشب، يبتسم ويقدر قيمة التعب والصنعة. هذي هي الروح اللي نفركسو عليها، تواصل بين الأرض، الحرفي، ودارك.', videoSrc: '/videos/economie-circulaire-1.mp4', thumbnail: '/videos/economie-circulaire-1.jpg' }
+      { time: '0–30 s', visual: 'شروق الشمس الذهبي على حقول الزيتون، فلاح يتمشى بلبسة تقليدية ويلم في أغصان الخشب الخام', voixOff: 'مع خيوط الفجر الأولى في ريف تونس، تبدأ رحلة خشب الزيتون. الفلاح يلم الأغصان اللي بقات من الموسم، كنز طبيعي يستنى شكون يعطيه الروح.', videoSrc: 'videos/economie-circulaire-1.mp4', thumbnail: 'videos/economie-circulaire-1.jpg' },
+      { time: '30–60 s', visual: 'داخل ورشة قديمة، ضوء الشمس يطل من الكوة، الحرفي يقص ويشكل الخشب بكل تركيز، لقطات مقربة لليدين', voixOff: 'داخل الورشة، الصمت ما يقطعه كان صوت الأدوات. الحرفي ببراعة يديه، يشكل في الخشب، يحترم عروقه وتفاصيله، في لقطة تعكس قرون من الصنعة.', videoSrc: 'videos/economie-circulaire-2.mp4', thumbnail: 'videos/economie-circulaire-2.jpg' },
+      { time: '60–90 s', visual: 'عملية الصنفرة (sanding) والدهن بالزيت الطبيعي، الخشب يبدأ يلمع ويظهر جماله النهائي', voixOff: 'بشوية بشوية، الغبرة تبرد والجمال يظهر. الخشب يتحول لملاعق، صحفة، وديكورات تفوح بريحة الأرض. لمسة الزيت الطبيعي ترجعلو بريقه.', videoSrc: 'videos/economie-circulaire-3.mp4', thumbnail: 'videos/economie-circulaire-3.jpg' },
+      { time: '90–120 s', visual: 'عرض المنتجات في ستاند سوقنا في سوق تقليدي مزين، ترتيب فني للمنتجات', voixOff: 'الآن, المنتجات جاهزة. في قلب سوق حرفي تونسي، تحف خشب الزيتون تتصدر المشهد، تجذب العين برقة تصميمها وأصالتها.', videoSrc: 'videos/economie-circulaire-4.mp4', thumbnail: 'videos/economie-circulaire-4.jpg' },
+      { time: '120–150 s', visual: 'زبائن يلمسوا الخشب، يتبسموا ويتناقشوا مع الحرفي، لقطة شراء وفرحة متبادلة', voixOff: 'الزبون يلمس الدفء في الخشب، يبتسم ويقدر قيمة التعب والصنعة. هذي هي الروح اللي نفركسو عليها، تواصل بين الأرض، الحرفي، ودارك.', videoSrc: 'videos/economie-circulaire-1.mp4', thumbnail: 'videos/economie-circulaire-1.jpg' }
     ]
   },
   {
     id: 'palm-weave-story',
     title: 'سعف النخيل: ضفيرة الواحة 🌴',
     duration: '2:30',
-    thumbnail: '/videos/sfax-woodwork.jpg',
+    thumbnail: 'videos/sfax-woodwork.jpg',
     items: [
       'جمع السعف في واحات الجنوب',
       'صنعة الضفيرة في حوش العربي',
@@ -62,18 +62,18 @@ const videos: Video[] = [
     music: 'موسيقى صحراوية و صوت ريح خفيف',
     slogan: "من قلب الواحة، صنعتنا استدامة.",
     scenes: [
-      { time: '0–30 s', visual: 'لقطة درون لواحة شاسعة وقت الغروب، امرأة تجمع السعف اليابس من الأرض بوقار', voixOff: 'في واحات الجنوب العظيمة، المرا التونسية تجمع في السعف الشايح، فضلات النخلة اللي باش تولي أجمل قفة في يديك من بعد.', videoSrc: '/videos/sfax-woodwork.mp4', thumbnail: '/videos/sfax-woodwork.jpg' },
-      { time: '30–60 s', visual: 'داخل حوش الدار، المرأة تظفر السعف بإيقاع منتظم، لقطات مقربة للسعف وهو يتداخل', voixOff: 'في الحوش العربي، يبدأ السحر. يدين الحرفية تظفر السعف بكل صبر، حركة ورا حركة، تخرج أنماط تحكي حكاية الواحة والصبر الجميل.', videoSrc: '/videos/economie-circulaire-3.mp4', thumbnail: '/videos/economie-circulaire-3.jpg' },
-      { time: '60–90 s', visual: 'القفة تبدأ تظهر ملامحها، خياطة اليدين والقوالب، وضع اللمسات الملونة', voixOff: 'الضفيرة تطوال وتولي قفة، مروحة، ولا مظلة. إتقان في كل تفصيل، صناعة يدوية تحترم الطبيعة وما تلوّثش البيئة.', videoSrc: '/videos/tunis-textile.mp4', thumbnail: '/videos/tunis-textile.jpg' },
-      { time: '90–120 s', visual: 'القفف معروضة في مدخل السوق، تعكس ألوان الشمس، حركة خفيفة للناس', voixOff: 'في مدخل المدينة العتيقة، القفف تتستف بكل فخامة. ألوان السعف الطبيعي تعكس شمس بلادنا وتجذب كل زائر يقدر الأصالة.', videoSrc: '/videos/sfax-woodwork.mp4', thumbnail: '/videos/sfax-woodwork.jpg' },
-      { time: '120–150 s', visual: 'سائحة تختار قفة وتجربها، تبتسم للحرفية، لقطة وداع دافئة', voixOff: 'فرحة الزبونة وهي تهز معاها قطعة من روح الجنوب. الابتسامة المتبادلة هي أحسن شهادة على نجاح قصة سوقنا واستدامتها.', videoSrc: '/videos/tunis-textile.mp4', thumbnail: '/videos/tunis-textile.jpg' }
+      { time: '0–30 s', visual: 'لقطة درون لواحة شاسعة وقت الغروب، امرأة تجمع السعف اليابس من الأرض بوقار', voixOff: 'في واحات الجنوب العظيمة، المرا التونسية تجمع في السعف الشايح، فضلات النخلة اللي باش تولي أجمل قفة في يديك من بعد.', videoSrc: 'videos/sfax-woodwork.mp4', thumbnail: 'videos/sfax-woodwork.jpg' },
+      { time: '30–60 s', visual: 'داخل حوش الدار، المرأة تظفر السعف بإيقاع منتظم، لقطات مقربة للسعف وهو يتداخل', voixOff: 'في الحوش العربي، يبدأ السحر. يدين الحرفية تظفر السعف بكل صبر، حركة ورا حركة، تخرج أنماط تحكي حكاية الواحة والصبر الجميل.', videoSrc: 'videos/economie-circulaire-3.mp4', thumbnail: 'videos/economie-circulaire-3.jpg' },
+      { time: '60–90 s', visual: 'القفة تبدأ تظهر ملامحها، خياطة اليدين والقوالب، وضع اللمسات الملونة', voixOff: 'الضفيرة تطوال وتولي قفة، مروحة، ولا مظلة. إتقان في كل تفصيل، صناعة يدوية تحترم الطبيعة وما تلوّثش البيئة.', videoSrc: 'videos/tunis-textile.mp4', thumbnail: 'videos/tunis-textile.jpg' },
+      { time: '90–120 s', visual: 'القفف معروضة في مدخل السوق، تعكس ألوان الشمس، حركة خفيفة للناس', voixOff: 'في مدخل المدينة العتيقة، القفف تتستف بكل فخامة. ألوان السعف الطبيعي تعكس شمس بلادنا وتجذب كل زائر يقدر الأصالة.', videoSrc: 'videos/sfax-woodwork.mp4', thumbnail: 'videos/sfax-woodwork.jpg' },
+      { time: '120–150 s', visual: 'سائحة تختار قفة وتجربها، تبتسم للحرفية، لقطة وداع دافئة', voixOff: 'فرحة الزبونة وهي تهز معاها قطعة من روح الجنوب. الابتسامة المتبادلة هي أحسن شهادة على نجاح قصة سوقنا واستدامتها.', videoSrc: 'videos/tunis-textile.mp4', thumbnail: 'videos/tunis-textile.jpg' }
     ]
   },
   {
     id: 'wool-story',
     title: 'صوف البلاد: دفء المنسج 🐑',
     duration: '2:30',
-    thumbnail: '/videos/kairouan-carpet.jpg',
+    thumbnail: 'videos/kairouan-carpet.jpg',
     items: [
       'رعي الأغنام في جبال الريف',
       'غسل وغزل الصوف الخام',
@@ -84,18 +84,18 @@ const videos: Video[] = [
     music: 'موسيقى شعبية أصيلة و صوت الغنم',
     slogan: "صوفنا دافي، و صنعتنا كافي.",
     scenes: [
-      { time: '0–30 s', visual: 'مشهد واسع للجبال، قطيع غنم يرعى في الخضار، السارح يجمع الصوف بعد الجز', voixOff: 'من جبالنا الخضراء تبدأ الحكاية. الصوف الخام، أبيض كي الثلج، يتلم بكل حرص باش يولي دفء لبيوتنا في الشتاء.', videoSrc: '/videos/kairouan-carpet.mp4', thumbnail: '/videos/kairouan-carpet.jpg' },
-      { time: '30–60 s', visual: 'حرفيات يغزلو في الصوف بالمغزل التقليدي، لقطات مقربة للصوف وهو يتحول لخيوط', voixOff: 'الحرفيات ببركة يديهم يغزلوا في الصوف. المغزل يدور ويطلع خيوط متينة، مخدومة بالحب ومصبرة بصوت الغناء الريفي الجميل.', videoSrc: '/videos/tunis-textile.mp4', thumbnail: '/videos/tunis-textile.jpg' },
-      { time: '60–90 s', visual: 'المنسج يتحرك، الخيوط تتداخل، ألوان المرقوم تبدأ تظهر بوضوح، لقطات فنية للنسيج', voixOff: 'على المنسج العربي، الزربية تبدأ تتولد. كل خيط له بلاصته، وكل لون يحكي تاريخ القيروان والجنوب. فن يتوارثوه الأجيال بكل فخر.', videoSrc: '/videos/kairouan-carpet.mp4', thumbnail: '/videos/kairouan-carpet.jpg' },
-      { time: '90–120 s', visual: 'المرقوم والزرابي معروضين في فضاء واسع، إضاءة دافئة تبرز ملمس الصوف', voixOff: 'في فضاء سوقنا، الزرابي تتحل بكل فخامة. المرقوم التونسي يزيّن البلاصة ويفرش طريق النجاح لكل حرفية أبدعت في صنعتها.', videoSrc: '/videos/tunis-textile.mp4', thumbnail: '/videos/tunis-textile.jpg' },
-      { time: '120–150 s', visual: 'عائلة تختار زربية للدار، يمسّوا في جودة الصوف، لقطة تجمع الحرفية بالزبائن', voixOff: 'الزربية مش مجرد غطاء للأرض، هي بركة في الدار. العائلة تختار صنعتنا، والحرفية تبتسم وهي تشوف تعبها يولي فرحة في قلب دار تونسية.', videoSrc: '/videos/kairouan-carpet.mp4', thumbnail: '/videos/kairouan-carpet.jpg' }
+      { time: '0–30 s', visual: 'مشهد واسع للجبال، قطيع غنم يرعى في الخضار، السارح يجمع الصوف بعد الجز', voixOff: 'من جبالنا الخضراء تبدأ الحكاية. الصوف الخام، أبيض كي الثلج، يتلم بكل حرص باش يولي دفء لبيوتنا في الشتاء.', videoSrc: 'videos/kairouan-carpet.mp4', thumbnail: 'videos/kairouan-carpet.jpg' },
+      { time: '30–60 s', visual: 'حرفيات يغزلو في الصوف بالمغزل التقليدي، لقطات مقربة للصوف وهو يتحول لخيوط', voixOff: 'الحرفيات ببركة يديهم يغزلوا في الصوف. المغزل يدور ويطلع خيوط متينة، مخدومة بالحب ومصبرة بصوت الغناء الريفي الجميل.', videoSrc: 'videos/tunis-textile.mp4', thumbnail: 'videos/tunis-textile.jpg' },
+      { time: '60–90 s', visual: 'المنسج يتحرك، الخيوط تتداخل، ألوان المرقوم تبدأ تظهر بوضوح، لقطات فنية للنسيج', voixOff: 'على المنسج العربي, الزربية تبدأ تتولد. كل خيط له بلاصته، وكل لون يحكي تاريخ القيروان والجنوب. فن يتوارثوه الأجيال بكل فخر.', videoSrc: 'videos/kairouan-carpet.mp4', thumbnail: 'videos/kairouan-carpet.jpg' },
+      { time: '90–120 s', visual: 'المرقوم والزرابي معروضين في فضاء واسع، إضاءة دافئة تبرز ملمس الصوف', voixOff: 'في فضاء سوقنا، الزرابي تتحل بكل فخامة. المرقوم التونسي يزيّن البلاصة ويفرش طريق النجاح لكل حرفية أبدعت في صنعتها.', videoSrc: 'videos/tunis-textile.mp4', thumbnail: 'videos/tunis-textile.jpg' },
+      { time: '120–150 s', visual: 'عائلة تختار زربية للدار، يمسّوا في جودة الصوف، لقطة تجمع الحرفية بالزبائن', voixOff: 'الزربية مش مجرد غطاء للأرض، هي بركة في الدار. العائلة تختار صنعتنا، والحرفية تبتسم وهي تشوف تعبها يولي فرحة في قلب دار تونسية.', videoSrc: 'videos/kairouan-carpet.mp4', thumbnail: 'videos/kairouan-carpet.jpg' }
     ]
   },
   {
     id: 'furniture-upcycling',
     title: 'إعادة الروح: تحف من خشب قديم 🪑',
     duration: '2:30',
-    thumbnail: '/videos/economie-circulaire-3.jpg',
+    thumbnail: 'videos/economie-circulaire-3.jpg',
     items: [
       'تجميع خشب قديم ومهجور',
       'ترميم وصنفرة في الورشة',
@@ -106,18 +106,18 @@ const videos: Video[] = [
     music: 'موسيقى آلية عصرية هادية و صوت مطرقة',
     slogan: "لا شي يضيع، كل شي يرجع للحياة.",
     scenes: [
-      { time: '0–30 s', visual: 'تجميع قطع خشبية من أثاث قديم ملوح، الحرفي يتفقد جودة الخشب بلقطات درامية', voixOff: 'في عالم الضياع، الحرفي يلقى الحياة. خشب مهجور وأثاث قديم يستنى لمسة مبدعة باش يرجع يلمع من جديد في شكل عصري.', videoSrc: '/videos/economie-circulaire-3.mp4', thumbnail: '/videos/economie-circulaire-3.jpg' },
-      { time: '30–60 s', visual: 'في الورشة، أصوات أدوات النجار، تقطيع وصنفرة الخشب، شرر خفيف وضوء فني', voixOff: 'عمل جبار يبدأ في الورشة. الصنفرة تنحي غبار السنين، والقص يحدد ملامح المستقبل. دقة في الحركة، وإبداع في التفكير.', videoSrc: '/videos/economie-circulaire-2.mp4', thumbnail: '/videos/economie-circulaire-2.jpg' },
-      { time: '60–90 s', visual: 'تجميع طاولة أو رفوف، دهان نهائي يبرز عروق الخشب القديم بجمالية مودرن', voixOff: 'القطع تتجمع، والروح ترجع. طاولة عصرية بتصميم فريد، تحترم الماضي وتخدم الحاضر. كل قطعة هي وعد باستدامة حقيقية.', videoSrc: '/videos/economie-circulaire-4.mp4', thumbnail: '/videos/economie-circulaire-4.jpg' },
-      { time: '90–120 s', visual: 'الأثاث معروض في رواق فني أو ستاند عصري، إضاءة "Spotlight" على التفاصيل', voixOff: 'في فضاء سوقنا الرقمي، الأثاث هذا يلقى قيمته. تصاميم تحترم البيئة وتواتي كل ذوق رفيع يفركس على التميز والأصالة.', videoSrc: '/videos/economie-circulaire-1.mp4', thumbnail: '/videos/economie-circulaire-1.jpg' },
-      { time: '120–150 s', visual: 'شاب يصور الأثاث بالتلفون، يلمس الخشب بتقدير، لقطة شراء عبر المنصة', voixOff: 'جيلنا الجديد يقدر قيمة "الرسكلة" والجمال. بلمسة بسيطة على المنصة، يحجز مكانه في عالم الاستدامة ويدعم حرفي تونسي مبدع.', videoSrc: '/videos/economie-circulaire-3.mp4', thumbnail: '/videos/economie-circulaire-3.jpg' }
+      { time: '0–30 s', visual: 'تجميع قطع خشبية من أثاث قديم ملوح، الحرفي يتفقد جودة الخشب بلقطات درامية', voixOff: 'في عالم الضياع، الحرفي يلقى الحياة. خشب مهجور وأثاث قديم يستنى لمسة مبدعة باش يرجع يلمع من جديد في شكل عصري.', videoSrc: 'videos/economie-circulaire-3.mp4', thumbnail: 'videos/economie-circulaire-3.jpg' },
+      { time: '30–60 s', visual: 'في الورشة، أصوات أدوات النجار، تقطيع وصنفرة الخشب، شرر خفيف وضوء فني', voixOff: 'عمل جبار يبدأ في الورشة. الصنفرة تنحي غبار السنين، والقص يحدد ملامح المستقبل. دقة في الحركة، وإبداع في التفكير.', videoSrc: 'videos/economie-circulaire-2.mp4', thumbnail: 'videos/economie-circulaire-2.jpg' },
+      { time: '60–90 s', visual: 'تجميع طاولة أو رفوف، دهان نهائي يبرز عروق الخشب القديم بجمالية مودرن', voixOff: 'القطع تتجمع، والروح ترجع. طاولة عصرية بتصميم فريد، تحترم الماضي وتخدم الحاضر. كل قطعة هي وعد باستدامة حقيقية.', videoSrc: 'videos/economie-circulaire-4.mp4', thumbnail: 'videos/economie-circulaire-4.jpg' },
+      { time: '90–120 s', visual: 'الأثاث معروض في رواق فني أو ستاند عصري، إضاءة "Spotlight" على التفاصيل', voixOff: 'في فضاء سوقنا الرقمي، الأثاث هذا يلقى قيمته. تصاميم تحترم البيئة وتواتي كل ذوق رفيع يفركس على التميز والأصالة.', videoSrc: 'videos/economie-circulaire-1.mp4', thumbnail: 'videos/economie-circulaire-1.jpg' },
+      { time: '120–150 s', visual: 'شاب يصور الأثاث بالتلفون، يلمس الخشب بتقدير، لقطة شراء عبر المنصة', voixOff: 'جيلنا الجديد يقدر قيمة "الرسكلة" والجمال. بلمسة بسيطة على المنصة، يحجز مكانه في عالم الاستدامة ويدعم حرفي تونسي مبدع.', videoSrc: 'videos/economie-circulaire-3.mp4', thumbnail: 'videos/economie-circulaire-3.jpg' }
     ]
   },
   {
     id: 'nabeul-pottery-story',
     title: 'فخار نابل: لمسة الأرض 🏺',
     duration: '2:30',
-    thumbnail: '/videos/nabeul-pottery.jpg',
+    thumbnail: 'videos/nabeul-pottery.jpg',
     items: [
       'جمع الطين الأحمر من تلال نابل',
       'تشكيل الفخار على عجلة الحرفي',
@@ -128,11 +128,11 @@ const videos: Video[] = [
     music: 'موسيقى وترية تونسية وصوت العجلة',
     slogan: "من طين بلادنا، نصنع فخرنا.",
     scenes: [
-      { time: '0–30 s', visual: 'لقطة درون واسعة لتلال نابل وقت الشروق، فلاح يجمع في كتل الطين الخام بلونها الأحمر المميز', voixOff: 'في تلال نابل الخصبة، الحكاية تبدأ بالأرض. الطين الأحمر، كنزنا الطبيعي، يتلم بكل حب باش يولي تحفة في يدين الحرفي التونسي.', videoSrc: '/videos/nabeul-pottery.mp4', thumbnail: '/videos/nabeul-pottery.jpg' },
-      { time: '30–60 s', visual: 'داخل ورشة تقليدية، يدين الحرفي مشبكين بالطين، العجلة تدور والقطعة تبدأ تتشكل ببراعة', voixOff: 'في الورشة، الصمت يحكي إبداع. العجلة تدور، واليدين تشكل في الطين، حركة ورا حركة، حتّى تظهر ملامح "القلة" ولا "الصحفة" بأصالة تونسية.', videoSrc: '/videos/economie-circulaire-2.mp4', thumbnail: '/videos/economie-circulaire-2.jpg' },
-      { time: '60–90 s', visual: 'عملية التلوين (Émaillage) بألوان نابل الزاهية كالأزرق والأصفر، لقطات مقربة للريشة وهي ترسم الأنماط', voixOff: 'بعد ما يبرد الفخار، يجي وقت الألوان. ريشة الحرفي ترسم تاريخنا، أزرق البحر وأصفر الشمس يتلاقاو فوق الفخار باش يعطيوه روح جديدة.', videoSrc: '/videos/economie-circulaire-4.mp4', thumbnail: '/videos/economie-circulaire-4.jpg' },
-      { time: '90–120 s', visual: 'الفخار معروض في شوارع نابل العتيقة، ترتيب فني يجذب السياح والمارة، أضواء الشمس تلمع فوق الزجاج', voixOff: 'في قلب سوق نابل، الفخار يضوي المكان. تحف فنية معروضة بكل فخر، تحكي قصة صمود حرفة توارثوها الأجيال وما زالت تزيّن شوارعنا.', videoSrc: '/videos/nabeul-pottery.mp4', thumbnail: '/videos/nabeul-pottery.jpg' },
-      { time: '120–150 s', visual: 'سائحة تختار فاز (Vase) كبير، الحرفي يغلفه بكل عناية، تبادل ابتسامات وشكر، لقطة ختامية دافئة', voixOff: 'القطعة هذي مش مجرد فخار، هي شقفة من قلب تونس. فرحة الزبون وهو يهز معاه صنعتنا هي الوقود اللي يخلينا نواصلو ونطوروا في سوقنا.', videoSrc: '/videos/nabeul-pottery.mp4', thumbnail: '/videos/nabeul-pottery.jpg' }
+      { time: '0–30 s', visual: 'لقطة درون واسعة لتلال نابل وقت الشروق, فلاح يجمع في كتل الطين الخام بلونها الأحمر المميز', voixOff: 'في تلال نابل الخصبة، الحكاية تبدأ بالأرض. الطين الأحمر، كنزنا الطبيعي، يتلم بكل حب باش يولي تحفة في يدين الحرفي التونسي.', videoSrc: 'videos/nabeul-pottery.mp4', thumbnail: 'videos/nabeul-pottery.jpg' },
+      { time: '30–60 s', visual: 'داخل ورشة تقليدية، يدين الحرفي مشبكين بالطين، العجلة تدور والقطعة تبدأ تتشكل ببراعة', voixOff: 'في الورشة، الصمت يحكي إبداع. العجلة تدور، واليدين تشكل في الطين، حركة ورا حركة، حتّى تظهر ملامح "القلة" ولا "الصحفة" بأصالة تونسية.', videoSrc: 'videos/economie-circulaire-2.mp4', thumbnail: 'videos/economie-circulaire-2.jpg' },
+      { time: '60–90 s', visual: 'عملية التلوين (Émaillage) بألوان نابل الزاهية كالأزرق والأصفر، لقطات مقربة للريشة وهي ترسم الأنماط', voixOff: 'بعد ما يبرد الفخار، يجي وقت الألوان. ريشة الحرفي ترسم تاريخنا، أزرق البحر وأصفر الشمس يتلاقاو فوق الفخار باش يعطيوه روح جديدة.', videoSrc: 'videos/economie-circulaire-4.mp4', thumbnail: 'videos/economie-circulaire-4.jpg' },
+      { time: '90–120 s', visual: 'الفخار معروض في شوارع نابل العتيقة، ترتيب فني يجذب السياح والمارة، أضواء الشمس تلمع فوق الزجاج', voixOff: 'في قلب سوق نابل، الفخار يضوي المكان. تحف فنية معروضة بكل فخر، تحكي قصة صمود حرفة توارثوها الأجيال وما زالت تزيّن شوارعنا.', videoSrc: 'videos/nabeul-pottery.mp4', thumbnail: 'videos/nabeul-pottery.jpg' },
+      { time: '120–150 s', visual: 'سائحة تختار فاز (Vase) كبير، الحرفي يغلفه بكل عناية، تبادل ابتسامات وشكر، لقطة ختامية دافئة', voixOff: 'القطعة هذي مش مجرد فخار، هي شقفة من قلب تونس. فرحة الزبون وهو يهز معاه صنعتنا هي الوقود اللي يخلينا نواصلو ونطوروا في سوقنا.', videoSrc: 'videos/nabeul-pottery.mp4', thumbnail: 'videos/nabeul-pottery.jpg' }
     ]
   },
 ];
