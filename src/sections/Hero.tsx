@@ -11,7 +11,7 @@ export function Hero() {
   const heroFeatures = t('home.hero.features') as string[];
 
   return (
-    <section className="relative min-h-[100dvh] flex items-center pt-24 pb-12 overflow-hidden gradient-hero">
+    <section className="relative min-h-[100dvh] flex items-center pt-24 pb-12 overflow-hidden bg-[#fdfbf7] gradient-hero">
       {/* Decorative ambient background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -right-[10%] w-[500px] h-[500px] bg-terracotta/20 rounded-full blur-[100px] mix-blend-multiply animate-pulse-glow" />
