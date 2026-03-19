@@ -4,12 +4,12 @@ import { Button } from '@/components/ui/button';
 import { useState, useMemo } from 'react';
 import { useSEO } from '@/hooks';
 import { useLanguage } from '@/store/LanguageContext';
+import { getProductSEO, getProductSchema } from '@/lib/seo';
 import type { Product as ProductType } from '@/types';
 
 export function Product() {
   const { id } = useParams<{ id: string }>();
   const { t } = useLanguage();
-  const { SEOComponent } = useSEO();
   const [quantity, setQuantity] = useState(1);
 
   const products: ProductType[] = useMemo(() => [
@@ -166,6 +166,32 @@ export function Product() {
   ], [t]);
 
   const product = products.find((p) => p.id === Number(id)) || products[0];
+  
+  const productSeo = getProductSEO({
+    id: product.id.toString(),
+    name: product.name,
+    description: product.description || '',
+    image: product.image,
+    artisan: product.artisan,
+    price: product.price,
+  });
+
+  const productSchema = getProductSchema({
+    id: product.id.toString(),
+    name: product.name,
+    description: product.description || '',
+    image: product.image,
+    price: product.price,
+    rating: product.rating,
+    reviews: product.reviews,
+    artisan: product.artisan,
+    inStock: product.stock > 0,
+  });
+
+  const { SEOComponent } = useSEO({
+    customMeta: productSeo,
+    schemas: [productSchema],
+  });
 
   return (
     <>

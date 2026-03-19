@@ -31,7 +31,7 @@ export function VideoSection() {
               {t('home.video.tagline')}
             </span>
             <h2 className="text-4xl md:text-5xl font-black text-white mb-5 tracking-tight leading-tight">
-              {t('home.video.title').split('Action')[0]} <span className="text-terracotta">{t('home.video.title').includes('Action') ? 'Action' : 'العمل'}</span>
+              {t('home.video.title').split(' ').slice(0, -1).join(' ')} <span className="text-terracotta">{t('home.video.title').split(' ').pop()}</span>
             </h2>
             <p className="text-lg text-gray-300 font-medium max-w-2xl mx-auto mb-10">
               {t('home.video.description')}

@@ -96,7 +96,7 @@ export function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-black/10 to-transparent opacity-80 z-10 transition-opacity duration-300 group-hover:opacity-60" />
                 <img
                   src="/videos/economie-circulaire-1.jpg"
-                  alt="Économie circulaire Soukna"
+                  alt="Artisanat durable Soukna"
                   className="w-full h-[600px] object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 

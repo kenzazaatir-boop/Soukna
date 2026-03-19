@@ -39,7 +39,9 @@ export interface Artisan {
   rating: number;
   totalSales: number;
   productCount: number;
+  productsCount?: number; // Alias for consistency
   image: string;
+  description?: string; // New field for UI
   bio?: string;
   bioAr?: string;
   yearsExperience?: number;

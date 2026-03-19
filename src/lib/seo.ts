@@ -116,12 +116,12 @@ export const SEO_CONFIG: Record<string, SEOMetaData> = {
   },
 
   impact: {
-    title: "Impact Social - Soukna | Economie Circulaire & Développement",
+    title: "Impact Social - Soukna | Artisanat Durable & Développement",
     description:
-      "Découvrez l'impact social et environnemental de Soukna. Chiffres, témoignages et initiative d'économie circulaire.",
+      "Découvrez l'impact social et environnemental de Soukna. Chiffres, témoignages et initiative d'artisanat durable.",
     keywords: [
       "impact social",
-      "économie circulaire",
+      "artisanat durable",
       "développement durable",
       "artisanat durable",
     ],

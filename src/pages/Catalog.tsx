@@ -1,166 +1,52 @@
-import { useState, useMemo } from 'react';
-import { Link } from 'react-router-dom';
-import { Filter, ShoppingCart, Star, MapPin, Leaf, Search, X } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Checkbox } from '@/components/ui/checkbox';
-import { Slider } from '@/components/ui/slider';
-import { Input } from '@/components/ui/input';
+import { useState, useMemo, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useSearch, usePagination, useSEO } from '@/hooks';
-import { useCart } from '@/store';
+import {
+  Filter,
+  Search,
+  ShoppingCart,
+  Star,
+  Leaf,
+  MapPin,
+  X
+} from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { toast } from 'sonner';
+import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
+import { Slider } from '@/components/ui/slider';
+import { Checkbox } from '@/components/ui/checkbox';
 import { SlideIn, HoverScale } from '@/components/animations';
+import { useCart } from '@/store';
+import { usePagination, useSearch } from '@/hooks';
+import { useSEO } from '@/hooks/useSEO';
+import { Skeleton } from '@/components/ui/skeleton';
 import type { Product } from '@/types';
 import { useLanguage } from '@/store/LanguageContext';
+
+import { getProducts } from '@/lib/data';
 
 export function Catalog() {
   const { t } = useLanguage();
   const { SEOComponent } = useSEO({ includeBreadcrumb: true });
 
-  const products: Product[] = useMemo(() => [
-    {
-      id: 1,
-      name: t('catalog.products.0.name'),
-      artisan: 'Fatma Ben Ali',
-      location: t('home.map.regions.nabeul'),
-      category: 'alimentaire',
-      price: 12,
-      rating: 4.9,
-      reviews: 234,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 92,
-      tags: ['Bio', 'Local'],
-      stock: 45,
-      description: t('catalog.products.0.description'),
-    },
-    {
-      id: 2,
-      name: t('catalog.products.1.name'),
-      artisan: 'Mohamed Trabelsi',
-      location: t('home.map.regions.sfax'),
-      category: 'alimentaire',
-      price: 35,
-      rating: 4.8,
-      reviews: 189,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 95,
-      tags: ['Bio', 'Traditionnel'],
-      stock: 30,
-      description: t('catalog.products.1.description'),
-    },
-    {
-      id: 3,
-      name: t('catalog.products.2.name'),
-      artisan: 'Ahmed Gharbi',
-      location: t('home.map.regions.zaghouan'),
-      category: 'alimentaire',
-      price: 45,
-      rating: 5.0,
-      reviews: 156,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 88,
-      tags: ['Naturel', 'Montagne'],
-      stock: 20,
-    },
-    {
-      id: 4,
-      name: t('catalog.products.3.name'),
-      artisan: 'Salma Hamdi',
-      location: t('home.map.regions.tozeur'),
-      category: 'alimentaire',
-      price: 28,
-      rating: 4.9,
-      reviews: 312,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 90,
-      tags: ['Désert', 'Premium'],
-      stock: 50,
-    },
-    {
-      id: 5,
-      name: t('catalog.products.4.name'),
-      artisan: 'Amina Bouaziz',
-      location: t('home.map.regions.kairouan'),
-      category: 'artisanat',
-      price: 450,
-      rating: 4.7,
-      reviews: 89,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 85,
-      tags: ['Traditionnel', 'Fait main'],
-      stock: 5,
-    },
-    {
-      id: 6,
-      name: t('catalog.products.5.name'),
-      artisan: 'Karim Jaziri',
-      location: t('home.map.regions.nabeul'),
-      category: 'artisanat',
-      price: 85,
-      rating: 4.8,
-      reviews: 145,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 78,
-      tags: ['Céramique', 'Décoratif'],
-      stock: 15,
-    },
-    {
-      id: 7,
-      name: t('catalog.products.6.name'),
-      artisan: 'Nadia Slimani',
-      location: t('home.map.regions.tunis'),
-      category: 'textile',
-      price: 55,
-      rating: 4.7,
-      reviews: 234,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 87,
-      tags: ['Coton bio', 'Plage'],
-      stock: 35,
-    },
-    {
-      id: 8,
-      name: t('catalog.products.7.name'),
-      artisan: 'Hedi Romdhane',
-      location: t('home.map.regions.mahdia'),
-      category: 'textile',
-      price: 75,
-      rating: 4.6,
-      reviews: 92,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 95,
-      tags: ['Naturel', 'Durable'],
-      stock: 22,
-    },
-    {
-      id: 9,
-      name: t('catalog.products.8.name'),
-      artisan: 'Green Pack TN',
-      location: t('home.map.regions.tunis'),
-      category: 'ecologique',
-      price: 15,
-      rating: 4.9,
-      reviews: 234,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 98,
-      tags: ['Recyclé', 'Zéro déchet'],
-      stock: 100,
-    },
-    {
-      id: 10,
-      name: t('catalog.products.9.name'),
-      artisan: 'Samia Khalil',
-      location: t('home.map.regions.tunis'),
-      category: 'ecologique',
-      price: 35,
-      rating: 4.8,
-      reviews: 167,
-      image: 'https://images.unsplash.com/photo-1544967082-d9d25d867d66?auto=format&fit=crop&q=80',
-      ecoScore: 94,
-      tags: ['Upcycling', 'Unique'],
-      stock: 18,
-    },
-  ], [t]);
+  const [products, setProducts] = useState<Product[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      setIsLoading(true);
+      try {
+        const data = await getProducts();
+        setProducts(data);
+      } catch (error) {
+        console.error('Failed to fetch products:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, [t]);
 
   const categories = ['alimentaire', 'artisanat', 'textile', 'ecologique'];
   const regions = ['nabeul', 'sfax', 'kairouan', 'tunis', 'tozeur', 'zaghouan', 'mahdia'];
@@ -317,45 +203,61 @@ export function Catalog() {
                   {pagination.startIndex}-{pagination.endIndex} {t('catalog.resultsCount')} {pagination.totalItems}
                 </p>
                 <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-6">
-                  {pagination.items.map((product) => (
-                    <HoverScale key={product.id}>
-                      <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-card border border-gray-100 h-full flex flex-col">
-                        <Link to={`/product/${product.id}`} className="relative aspect-[4/3] overflow-hidden bg-gray-100">
-                          <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                          <div className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 shadow-sm">
-                            <Leaf className="w-4 h-4 text-olive" />
-                            <span className="text-xs font-bold">{product.ecoScore}%</span>
-                          </div>
-                        </Link>
-                        <div className="p-5 flex-1 flex flex-col">
-                          <h3 className="font-bold line-clamp-2 mb-2 group-hover:text-terracotta transition-colors">
-                            {product.name}
-                          </h3>
-                          <p className="text-sm text-muted-foreground mb-4 flex items-center gap-1">
-                            <MapPin className="w-3.5 h-3.5" />
-                            {product.artisan}
-                          </p>
-                          <div className="flex items-center gap-2 mb-4">
-                            <div className="flex gap-0.5">
-                              {[...Array(5)].map((_, i) => (
-                                <Star key={i} className={`w-3.5 h-3.5 ${i < Math.floor(product.rating) ? 'fill-warm-gold text-warm-gold' : 'text-muted-foreground'}`} />
-                              ))}
-                            </div>
-                            <span className="text-xs font-semibold">{product.rating}</span>
-                          </div>
-                          <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
-                            <div>
-                              <p className="text-2xl font-black">{product.price}</p>
-                            <span className="text-xs text-muted-foreground">{t('catalog.currency')}</span>
-                          </div>
-                            <button onClick={() => handleAddToCart(product)} className="w-10 h-10 rounded-full bg-gray-100 hover:bg-terracotta hover:text-white transition-all flex items-center justify-center">
-                              <ShoppingCart className="w-5 h-5" />
-                            </button>
-                          </div>
+                  {isLoading ? (
+                    [...Array(6)].map((_, i) => (
+                      <div key={i} className="bg-white rounded-3xl p-5 space-y-4 shadow-soft border border-gray-100">
+                        <Skeleton className="aspect-[4/3] w-full rounded-2xl" />
+                        <div className="space-y-2">
+                          <Skeleton className="h-6 w-3/4" />
+                          <Skeleton className="h-4 w-1/2" />
                         </div>
-                      </motion.div>
-                    </HoverScale>
-                  ))}
+                        <div className="flex justify-between items-center pt-4">
+                          <Skeleton className="h-8 w-20" />
+                          <Skeleton className="h-10 w-10 rounded-full" />
+                        </div>
+                      </div>
+                    ))
+                  ) : (
+                    pagination.items.map((product) => (
+                      <HoverScale key={product.id}>
+                        <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="group bg-white rounded-3xl overflow-hidden shadow-soft hover:shadow-card border border-gray-100 h-full flex flex-col">
+                          <Link to={`/product/${product.id}`} className="relative aspect-[4/3] overflow-hidden bg-gray-100">
+                            <img src={product.image} alt={product.name} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                            <div className="absolute top-4 right-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 shadow-sm">
+                              <Leaf className="w-4 h-4 text-olive" />
+                              <span className="text-xs font-bold">{product.ecoScore}%</span>
+                            </div>
+                          </Link>
+                          <div className="p-5 flex-1 flex flex-col">
+                            <h3 className="font-bold line-clamp-2 mb-2 group-hover:text-terracotta transition-colors">
+                              {product.name}
+                            </h3>
+                            <p className="text-sm text-muted-foreground mb-4 flex items-center gap-1">
+                              <MapPin className="w-3.5 h-3.5" />
+                              {product.artisan}
+                            </p>
+                            <div className="flex items-center gap-2 mb-4">
+                              <div className="flex gap-0.5">
+                                {[...Array(5)].map((_, i) => (
+                                  <Star key={i} className={`w-3.5 h-3.5 ${i < Math.floor(product.rating) ? 'fill-warm-gold text-warm-gold' : 'text-muted-foreground'}`} />
+                                ))}
+                              </div>
+                              <span className="text-xs font-semibold">{product.rating}</span>
+                            </div>
+                            <div className="mt-auto pt-4 border-t border-gray-100 flex items-center justify-between">
+                              <div>
+                                <p className="text-2xl font-black">{product.price}</p>
+                                <span className="text-xs text-muted-foreground">{t('catalog.currency')}</span>
+                              </div>
+                              <button onClick={() => handleAddToCart(product)} className="w-10 h-10 rounded-full bg-gray-100 hover:bg-terracotta hover:text-white transition-all flex items-center justify-center">
+                                <ShoppingCart className="w-5 h-5" />
+                              </button>
+                            </div>
+                          </div>
+                        </motion.div>
+                      </HoverScale>
+                    ))
+                  )}
                 </div>
 
                 {pagination.totalPages > 1 && (
